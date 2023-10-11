@@ -1,0 +1,33 @@
+﻿/*/////////////////////////////////////////////////////////////////////////
+                          Reflection
+                          Workshop - #2 (P2)
+Full Name  : Anna Francesca Dela Cruz
+Student ID#: 123123150
+Email      : afgdela-cruz@myseneca.ca
+Section    : NJJ
+
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+1. Price1 does not work because its format specifier is a float, which is less precise than a double and has less bits. Because of this, floats can’t represent certain values.
+
+
+2. The first number works because of narrowing. The left side of the expression (money) is an integer (a lower type) and truncates the right float number (100 — a higher type) to a whole number. Then the expression is calculated as integers and finally stored as a float due to the format specifier.
+
+Although the 100 in the second expression is casted to a double type, the expression still works because like the previous scenario, the left side of the expression (money) is an integer (a lower type) and truncates the right double number (100 — a higher type) to a whole number. 
+
+
+The third expression works because of promotion. Money is casted to a double type and is a higher type than the integer 100. Because the double type is on the right side, it promotes 100 to a double as well. Then the expression is calculated with all values being the same, and then finally stored as a float because of the format specifier.
+
+
+3. a) The value of result is 72 because it’s stored in an integer type; the numbers after the decimal are truncated.
+        b)        1. $17.98
+            2. $72
+3. $17.98
+4. $72
+c) Because the format specifiers in samples 1 and 3 are expecting a double type value (not an int type), the samples do not work as expected.

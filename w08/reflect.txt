@@ -1,0 +1,35 @@
+﻿/*/////////////////////////////////////////////////////////////////////////
+Reflection
+Workshop - #8
+Full Name  : Anna Francesca Dela Cruz
+Student ID#: 123123150
+Email      : afgdela-cruz@myseneca.ca
+Section    : NJJ
+
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+1. Several helper functions were designed to return values in two different ways (via an argument and/orby return). Explain at least one benefit of this “feature”and how it increases usability/flexibility and at least one negative reason why having functions designed to work in this way may not be desirable.
+
+
+A benefit of having a function return values in two different ways is flexibility. This allows developers to use the returned value in different ways—through the pointer or the returned value. One negative reason to return in two different ways is redundancy. In some situations, it’s not necessary to have multiple return methods. Doing so can make the developer’s code look messy and more difficult to read.
+
+
+2. According to the design principles for structured design, functions should be highly cohesive and have low coupling.  Identify one function in the workshop that demonstrates less than perfect cohesion, and one function that demonstrates coupling that could be improved.  For each identified function, briefly explain what you would do to improve them.
+
+
+The start() function has less than perfect cohesion; It calls multiple functions AND printsf the multiple closing statements. To make it more cohesive, a separate function should be created to print the closing statements, like how displayCatFoodHeader() just prints the header of the analysis table.
+
+
+The convertLbsG() has moderate coupling; It depends on the convertLbsKg() function to return the proper values. To lower coupling, I would manually calculate the kg conversion in the convertLbsG() function, instead of calling convertLbsKg() inside it. This would allow convertLbsG() to be more independent.
+
+
+3. What advantages are there in passing structures to functions? Based on your readings this week (for next week’s topics) what could be done in the passing of this data to functions to make it more efficient? Explain how the “displayCatfoodData'' function could be improved.
+
+
+Passing structures to functions makes creating objects of structures easier; Developers could create multiple objects belonging to the same struct just with a call of a function. Developers can make passing structs to functions more efficient by using pointers. Using the arrow (->) symbol instead of the usual asterisk (*) allows this. I used the arrow symbol in my getCatFoodInfo() function. This allowed me to define the various variables of the struct without actually returning them.

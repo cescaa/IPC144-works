@@ -1,0 +1,14 @@
+In line number 45 of your output:
+The output should be:
+Average cost/shirt: $24.8854
+                     ^
+But your output is: 
+Average cost/shirt: $ 24.8854
+                     ^
+
+Unmatched character details:
+The character in column 22 is supposed to be:
+  [2] ASCII code(50)
+but you printed
+  [Space] ASCII code(32)
+

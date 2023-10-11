@@ -1,0 +1,14 @@
+In line number 90 of your output:
+The output should be:
+Analysis Report (Note: Serving = 64g)
+                                    ^
+But your output is: 
+Analysis Report (Note: Serving = 64g
+                                     ^
+
+Unmatched character details:
+The character in column 38 is supposed to be:
+  [)] ASCII code(41)
+but you printed
+  [Empty Line] ASCII code(0)
+

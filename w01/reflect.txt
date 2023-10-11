@@ -1,0 +1,44 @@
+﻿///////////////////////////////////////////////////////////////////////////
+
+
+                              Reflection
+                             Workshop - #1
+
+
+Full Name  : Anna Francesca Dela Cruz
+Student ID#: 123123150
+Email: afgdela-cruz@myseneca.ca
+Section: NJJ
+
+
+Authenticity Declaration:
+
+
+I declare this submission is the result of my own work and has not been shared with any other student or 3rd party content provider. This submitted piece of work is entirely of my own creation.
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+1. Do you have any previous programming experience? If so, what language(s)? If not, what are your initial thoughts about the C language and this course?
+
+
+I have some programming experience; I’m familiar with Javascript (although I’ve heard some people say it’s not a programming language), and I also watched a few CS50 lectures last year and completed a few of their problem sets. I’m still very new to programming, but I’m excited to learn more about C, especially since I see it shares similarities with Javascript.
+
+
+However, I was pretty nervous about using the required software in this course (e.g. PuTTy, WinSCP, Visual Studio etc.) because I’m a (very faithful) Mac user. But after learning that I can use Mac-friendly alternatives like VS Code and do everything else from the Terminal, my nerves subsided. I also started to look at my situation more positively: Although having a Mac may bring more challenges in this course, it will encourage me to take more initiative and research my alternatives on my own. Afterall, a good programmer is a good researcher.
+
+
+2. Describe your understanding of the compiling process of turning a C text file into an executable program.
+
+
+Compiling is the process of converting C, a human-readable code, into a language computers can read: machine code, which is a series of 0s and 1s. For a computer to execute a program, it must compile the C file first. I compiled my C files using commands in the Terminal.
+
+
+3. What do you hope to achieve in this course? Describe your goals and expectations.
+
+
+I hope learning C will make me more confident when it comes to programming. One of the reasons I stopped doing CS50 was because I got discouraged when it became more difficult. One of my goals is to complete it, so hopefully, this course will help me do so.
+
+
+Additionally, I hope to be able to apply what I learn in this course to other languages, especially Javascript. I’ve been studying Javascript on and off for about six months, but I still don’t feel fully comfortable with it. But, one of my professors at Seneca said he was able to learn Javascript in just a week after learning C.  So, I’m hoping IPC144 will strengthen my Javascript knowledge and make learning other languages in the future easier.

@@ -1,0 +1,59 @@
+﻿/*/////////////////////////////////////////////////////////////////////////
+Reflection
+Workshop - #6
+Full Name  : Anna Francesca Dela Cruz
+Student ID#: 123123150
+Email      : afgdela-cruz@myseneca.ca
+Section    : NJJ
+
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+1. Why are there three types of iteration constructs if we can make any one of them behave the same way? Refer to your code in this workshop to help backup your answer (do NOT include the code in your answer).Typically, when working with arrays, there is one iteration construct we favour –what is it and explain why it is more preferred over the other options.
+
+
+There are three types of loops because depending on the situation, one can be more convenient to use than the others. For example, in this workshop, I used “do/while” loops when prompting the user for input. Before I could check for an error and whether I needed to ask the user again for input, I needed to execute my prompt first. This is why “do/while” loops would be best for this situation because they execute statements first before checking the condition. Regular “while” loops, on the other hand, check the condition first before executing statements.
+
+
+When working with arrays, “for” loops are best because the condition in “for” loops typically include a specified length (e.g. i < 5;). Since arrays have specified lengths, it’s easier to include them in “for” loop conditions (e.g. arr[arrLength]; for (int i = 0; i < arrLength; i++);). We can use the “while” loops to iterate over arrays, but it would be more complicated since we would have to include additional elements like a counter variable. A “for” loop is just simpler and cleaner when working with arrays.
+
+
+In addition, when prompting users for input, we won’t know how many times they will input an invalid value; We won’t know how many times to execute the prompt. Therefore, it’s best to avoid “for” loops in this case, unless we want to add additional elements and complicate the code to make it behave the same way as a “do/while” loop.
+
+
+2. Describe what you did to both test and debug your program.  How did you go about finding where the problems were located (explain how you did this for both syntactic and semantic problems)?
+To test and debug my program, I performed white box testing. When developing my program, I had two bugs.
+
+
+The first bug was a syntactic error that involved printing the cost of each item in the summary chart. At first, I could not properly print the first and last element of the itemCosts[numOfItems] array. The first element’s precision was off and the last element was just zeros. I found this error by inputting the provided input values in the workshop instruction sheet. I thought the bug could have been an overflow/underflow error, where the double type could not properly represent certain values in the array. But, when I inputted the same value for all item costs, the bug remained the same.
+
+
+Then, I decided to separate all the cost-related logic and run it on a separate file to make the source of the bug easier to spot (e.g. “maybe I just forgot to put a semicolon somewhere?”). But, for some reason, it worked fine there. After a day and a half trying to mend the bug, I gave up, and asked for help on Stack Overflow.
+
+
+After posting my code, I realised the source of the bug was truly my understanding of variable definition. I put an undefined variable for the length of the itemCosts array, which led to its odd behaviour when being printed. I mistakenly assumed that since numOfItems was declared above itemCosts, it would have been defined by the time the program was ready to use it, since the value of numOfItems was inputted before the program needed to use the itemCosts array. However, that was incorrect. To fix the bug, I replaced numOfItems with MAX_ITEMS.
+
+
+The second bug was a semantic error. When trying to calculate the cost, and forecasted years and months for priority items, the sums would accumulate the sums of the previous menu selections. I found this error by inputting the provided input values in the workshop instruction sheet.
+
+
+Luckily, this bug was a lot easier to fix than the first. I had an idea of what caused the bug right after seeing the accumulations. To test my theory, I changed the order of the priority selection inputs. For example, instead of following the order laid out on the workshop instruction sheet (1, 2, 3), I entered 3, 2, 1, or 2, 3, 1, etc. After doing this, I saw that only the very first input resulted in the correct cost and forecast time, no matter what priority number I inputted first. My theory was correct; I needed to reset the priorsCost variable (total cost of items with the same priority) after every output to prevent accumulation.
+
+
+3. When attempting to submit your work, you receive the following error feedback from the submitter: [image shown]. Using the above explicit information, explain each step you must take to successfully identify and fix your error.
+
+
+When I get input errors like this on Matrix, it’s always a spacing issue—maybe I forgot to enter “\n” for a few lines.
+
+
+1. The first thing I do is check the location of the error (the example says line 6, column 33).
+2. Then, I download and open the provided output and master_output txt files so I can compare them visually. I download them using Cyberduck, a Secure File Transfer ( SFTP ) program for MacOS.
+3. I identify the cause of the error using the location provided.
+4. Once located, I correct my code in VS Code and I check for more spacing errors because there’s probably others in the rest of the file (if you’re me).
+5. To make sure I’ve gotten all of the spacing right, I compile and run my updated file in the terminal.
+6. Finally, I attempt to submit to Matrix again, fingers crossed.

@@ -1,0 +1,31 @@
+﻿/*/////////////////////////////////////////////////////////////////////////
+                        Assignment 1 - Milestone 3 — Reflection
+Full Name  : Anna Francesca Dela Cruz
+Student ID#: 123123150
+Email      : afgdela-cruz@myseneca.ca
+Section    : NJJ
+
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+1. void removeAppointmentFromFile(const char *datafile, int max, int patNum, int yr, int mon, int day);
+I created this function to remove a specific line/appointment from the appointmentData.txt file. Whenever the user deletes an appointment, my program deletes it from the appointment array and the data file as well. Because of the way I wrote the code for sorting the appointments, I had to reflect whatever changes I made in the appointment array to the file as well. For example, viewAllAppointments() grabs the data in the appointment struct based on the number of appointments in the file. Therefore, whenever the user wanted to remove or edit an appointment, I couldn’t just change it in the appointment array because viewAllAppointments() was dependent on the appointment count retrieved from the file.
+
+
+int findDaysInMonth(int mon, int yr);
+This function returns the number of days in a month based on the month and whether or not it’s a leap year. I needed this function to display the correct value when prompting the user for a day in a month.
+
+
+int checkAppointmentAvailability(struct Appointment *appointments, int yr, int mon, int day, int hr, int min, int maxAppointments);
+Just as the name implies, this function checks whether or not an appointment “slot” is available. When the user attempts to add an appointment, the function loops through the appointment dates and times and returns 1 if it finds an available time. The function addAppointment() calls this function and, depending on what checkAppointmentAvailability() returns, will allow or prevent the user from adding a new appointment.
+
+
+2. Because I had more than one scanf function call in clinic.c, I don’t think I coded my solution correctly. However, I do realize the value of minimizing the number of function calls in this module: Scanf is a weird and buggy function; Using it often requires calling the clearInputBuffer() function as well to prevent bugs. Because I called scanf so many times, I sometimes forgot to call clearInputBuffer() afterward, which led to many headaches and hair pulls when testing my program.
+
+
+3. I placed the three functions described in question one in the clinic.c module because their purposes were very specific. The functions in core.c were more general and can be called in multiple different functions, possibly even functions outside this program. However, my three functions were created to take in and output specific data and they were closely related to the other functions in clinic.c.

@@ -1,0 +1,57 @@
+/*/////////////////////////////////////////////////////////////////////////
+Reflection
+Workshop - #7
+Full Name  : Anna Francesca Dela Cruz
+Student ID#: 123123150
+Email      : afgdela-cruz@myseneca.ca
+Section    : NJJ
+
+
+Authenticity Declaration:
+I declare this submission is the result of my own work and has not been
+shared with any other student or 3rd party content provider. This submitted
+piece of work is entirely of my own creation.
+/////////////////////////////////////////////////////////////////////////*/
+
+
+1. Were you successful in coding non-repetitive sections of logic in the game play portion of this workshop(drawing of the ruler, board, player position, etc.)? If so, how did you accomplish this(don’t provide your code in your answer)?  If not, why? Explain precisely what you struggled with and refer to the logic of the workshop to justify your answer.
+
+
+Yes, I was successful in coding non-repetitive sections of the logic. I accomplished this by using loops and functions. For example, I created a do/while loop that repeatedly prompted the player for their next move, printed the rulers, updated the path and player’s symbol position, updated the scoreboard, updated the number of the player’s lives, and updated the player’s move history. Without the loop, I would’ve had to write all of the printf statements myself.
+
+
+Using functions also helped avoid some repetition. For example, I had two occasions that required writing the code to make the rulers twice. Instead of doing that, the makeRulers() function allowed me to write it once and call it whenever I needed it.
+
+
+2. Explain how the use of structures simplified your program.  Provide proof of your argument by contrasting the alternatives–do not include code in your answer–you must explain in simple terms the impact the concept of structures has in our programming strategies.
+
+
+Using structures helped me organise my data better. Because structures allow you to group related data together without having all of them be the same type, I was able to organise my variables between the player and the game clearly. This made my code easier to write and read.
+
+
+If I did not use structs, I would’ve had to write each variable for every game and player. It might not make too much of a difference in this scenario since there is only one game and one player, but if the program consisted of multiple players and multiple games per round, the number of variables needed would have been too long to organise effectively or too long to aid in readability. Using structures could reduce that redundancy of variables.
+
+
+3. Examine your code and determine the maximum number of levels of nesting (deepest) you ended up using in your program logic. Provide a simple indented outline that illustrates your answer (copy only the construct line for each level and do not include all the code within unless there is another nested construct).
+
+
+do {
+	if (player1.movesHistory[nextMove - 1] == 0)
+         {
+                        if (result == 1)
+                        {
+		       }
+                        else if (result == 2) 
+                        {
+		       }
+                        else if (result == 3) 
+                        {
+		       }
+                        else if (result == 4) 
+                        {
+		       }
+         }
+         else 
+         {
+	 }
+} while(!(player1.numLives == 0 || game1.maxMoves == 0));
